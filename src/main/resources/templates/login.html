@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>TODO supply a title</title>
+    </head>
+    <body>
+        <h1>login here please (:</h1>
+        <span th:text="${errormessage}">errormessage</span>
+        <p></p>
+        <form action="#" th:action="@{/login}" method="POST">
+            <!-- TODO remove before we go public: admin:admin -->
+            <p><label for="username">Userame</label>: <input type="text" name="username" id="username"/></p>
+            <p><label for="address">Password</label>: <input type="password" name="password" id="password"/></p>
+            <p><input type="submit" value="Submit" /></p>
+        </form>
+
+        <p></p>
+    </body>
+</html>

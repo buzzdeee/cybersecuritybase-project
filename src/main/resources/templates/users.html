@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Your Overview</title>
+    </head>
+    <body>
+        <div>List of users</div>
+        <ul>
+            <li th:each="user : ${users}">
+                <span th:text="${user.username}">username</span> (<span th:text="${user.admin}"></span>)
+            </li>
+        </ul>
+        <p></p>
+        <div>List of subscribers</div>
+        <ul>
+            <li th:each="subscriber : ${subscribers}">
+                <span th:utext="${subscriber.name}">item</span> (<span th:utext="${subscriber.address}"></span>)
+            </li>
+        </ul>
+    </body>
+</html>
